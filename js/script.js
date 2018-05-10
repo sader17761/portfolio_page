@@ -1,3 +1,11 @@
+// Loader Icon...fades out the icon first (inner) and then fades out the 'loader div'...makes for a smoother transition
+$(window).on('load', function() {
+    $('.loader .inner').fadeOut(750, function() {
+        $('.loader').fadeOut(750);
+    });
+});
+
+
 // this code will run when the document is ready...
 $(document).ready(function() {
     // instructions on how to use 'superslides' is here: https://github.com/nicinabox/superslides
@@ -100,7 +108,36 @@ $(document).ready(function() {
         });
         return false; // 'false' says don't do any more actions.
     });
-    
+
+
+    // Smooth scroll...e = event
+    $('#navigation li a').click(function(e) {
+        e.preventDefault();
+        // gets the href attribute of the item we clicked
+        var targetElement = $(this).attr('href');
+        var targetPosition = $(targetElement).offset().top;
+        $('html, body').animate({
+            scrollTop: targetPosition - 50
+        }, 'slow')
+    });
+
+
+    // Sticky Navbar when it reaches the top of the screen
+    const nav = $('#navigation');
+    const navTop = nav.offset().top;
+
+    $(window).on('scroll', stickyNavigation);
+
+    function stickyNavigation() {
+        var body = $('body');
+        if($(window).scrollTop() >= navTop) {
+            body.css('padding-top', nav.outerHeight() + 'px');
+            body.addClass('fixedNav');
+        } else {
+            body.css('padding-top', 0);
+            body.removeClass('fixedNav');
+        }
+    }
 
 });
 
