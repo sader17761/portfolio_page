@@ -26,6 +26,7 @@ $(document).ready(function() {
 
     // https://owlcarousel2.github.io/OwlCarousel2/
     $('.owl-carousel').owlCarousel({
+        autoPlay: true,
         loop:true,
         items: 4,
         responsive:{
