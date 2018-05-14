@@ -47,16 +47,16 @@ $(document).ready(function() {
 
     
 
-    // skillsTopOffset now contains the location of the '.skillsSection'
     var skillsTopOffset = $(".skillsSection").offset().top;
     var statsSectionOffset = $(".statsSection").offset().top;
+    var portfolioSectionOffset = $(".portfolioSection").offset().top;
     var countupFinished = false;
 
     $(window).scroll(function() {
         if(window.pageYOffset > skillsTopOffset - $(window).height() + 200) {
             $(function() {
                 $('.chart').easyPieChart({
-                    //your options goes here
+                    // options go here
                     easing: 'easeInOut',
                     barColor: '#fff',
                     trackColor: '#2c3e50',
@@ -79,6 +79,8 @@ $(document).ready(function() {
             })
             countupFinished = true;
         }
+
+        
     });
 
     $("[data-fancybox]").fancybox();
