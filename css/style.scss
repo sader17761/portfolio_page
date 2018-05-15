@@ -147,9 +147,27 @@ body {
     margin-bottom: 60px;
 }
 
+.skillsSection button {
+    border: none;
+    border: 1px solid darken(#34495e,10%);
+    border-radius: 2px;
+    background-color: #34495e;
+    color: darken(#34495e,10%);
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.skillsSection button:hover {
+    border: 1px solid #fff;
+    background-color: #34495e;
+    color: #fff;
+}
+
 .drag {
-    color: #bdc3c7;
+    color: darken(#34495e,10%);
     font-size: 14px;
+    margin: 20px 0 0 0;
 }
 
 .square-item {
@@ -429,6 +447,7 @@ img {
 
 .copyrightSection p {
     margin: 0;
+    font-size: 14px;
 }
 
 /* SOCIAL MEDIA LINKS */
@@ -446,11 +465,10 @@ img {
 
 .copyrightSection .social-media-links li {
     float: left;
-    
     width: 40px;
     height: 40px;
     padding: 10px;
-    margin: 0 5px;
+    margin: 0 5px 20px 5px;
     background-color: darken(#34495e,5%);
 }
 
@@ -458,6 +476,13 @@ img {
     display: block;
     font-size: 20px;
     color: #fff;
+}
+
+.copyrightSection .updated {
+    width: 200px;
+    margin: 0 auto;
+    color: darken(#34495e,10%);
+    text-align: center;
 }
 
 

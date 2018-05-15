@@ -25,25 +25,41 @@ $(document).ready(function() {
     });
 
     // https://owlcarousel2.github.io/OwlCarousel2/
-    $('.owl-carousel').owlCarousel({
-        autoPlay: true,
+    // $('.owl-carousel').owlCarousel({
+    //     autoPlay: true,
+    //     loop:true,
+    //     items: 4,
+    //     responsive:{
+    //         0:{
+    //             items:1
+    //         },
+    //         480:{
+    //             items:2
+    //         },
+    //         768:{
+    //             items:3
+    //         },
+    //         938:{
+    //             items:4
+    //         }
+    //     }
+    // });
+
+    var owl = $('.owl-carousel');
+    owl.owlCarousel({
+        items:4,
         loop:true,
-        items: 4,
-        responsive:{
-            0:{
-                items:1
-            },
-            480:{
-                items:2
-            },
-            768:{
-                items:3
-            },
-            938:{
-                items:4
-            }
-        }
+        margin:10,
+        autoplay:true,
+        autoplayTimeout:3000,
+        autoplayHoverPause:true
     });
+    $('.play').on('click',function(){
+        owl.trigger('play.owl.autoplay',[1000])
+    })
+    $('.stop').on('click',function(){
+        owl.trigger('stop.owl.autoplay')
+    })
 
     
 
