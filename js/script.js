@@ -47,7 +47,7 @@ $(document).ready(function() {
 
     var owl = $('.owl-carousel');
     owl.owlCarousel({
-        items:4,
+        items:5,
         loop:true,
         margin:10,
         autoplay:true,
@@ -57,7 +57,7 @@ $(document).ready(function() {
     $('.play').on('click',function(){
         owl.trigger('play.owl.autoplay',[1000])
     })
-    $('.stop').on('click',function(){
+    $('.pause').on('click',function(){
         owl.trigger('stop.owl.autoplay')
     })
 

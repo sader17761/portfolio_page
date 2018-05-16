@@ -129,7 +129,9 @@ body {
   background-color: #34495e;
   color: #22303d;
   padding: 10px 20px;
-  cursor: pointer;
+  cursor: pointer; }
+
+.skillsSection button:nth-child(2) {
   margin-left: 10px; }
 
 .skillsSection button:hover {
