@@ -158,5 +158,13 @@ $(document).ready(function() {
         }
     }
 
+    $(".toggle-btn").click(function(){
+        $(".message").slideToggle();
+        $(this).html('Hide More');
+        
+    });
+
+    
+
 });
 
